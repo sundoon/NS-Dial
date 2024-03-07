@@ -201,11 +201,12 @@ def generate_memory(sent, speaker, time, image_feas):
 
 
 def prepare_data_seq(batch_size=100):
-    data_path_babi = '/home/shiquan/Projects/DialogueReasoning/data/dialog-babi'
+    path_prefix = "/content/drive/MyDrive/github/NS-Dial/"
+    data_path_babi = path_prefix + 'data/dialog-babi'
     img_path = '/Multimodal-Knowledge-Base/images/restaurant'
-    file_train = '/home/shiquan/Projects/DialogueReasoning/data/smd/train.txt'
-    file_dev = '/home/shiquan/Projects/DialogueReasoning/data/smd/dev.txt'
-    file_test = '/home/shiquan/Projects/DialogueReasoning/data/smd/test.txt'
+    file_train = path_prefix + 'data/smd/train.txt'
+    file_dev = path_prefix + 'data/smd/dev.txt'
+    file_test = path_prefix + 'data/smd/test.txt'
     kb_path = data_path_babi + '-kb-all.txt'
     type_dict = get_type_dict(kb_path, dstc2=False)
     global_ent = entityList(kb_path, 4)
